@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+//var todos = require('./routes/todos');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+//app.use('/todos', todos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -31,6 +33,20 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+// Mongoose Database connectivity
+
+/*
+var mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
+mongoose.connect('mongodb://127.0.0.1:27017/CourseDemo')
+  .then(() => console.log('Connection succesful'))
+  .catch((err) => console.error(err));
+
+*/
+
 
 // error handlers
 
