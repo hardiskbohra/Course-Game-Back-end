@@ -4,7 +4,8 @@ This project folder contains the rest api for course game.
 We are using express.js framework, node.js
 
 
-Execute following command in cmd/bash
+Execute following command in cmd/bash:
+
 1.	npm install express-generator –g (After that close cmd and reopen it)
 2.	express
 3.	npm install sequelize --save
